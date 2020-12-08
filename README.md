@@ -11,9 +11,10 @@ IAND aims to spur to new quantitative international relations scholarship in two
 2) IAND also aims to add value by transforming and compiling classic IR datasets into dyad-years.  The barrier to this has been disparate coding schemes and the difficulties transforming monadic data into dyads.  IAND uses nearest-matching dictionaries and hand-coded error-correction methods to reconcile observations from six different datasets created by other scholars.  The result is a rich set of dyadic covariates which can facilitate a variety of multiple regression or cluster analyses.
 
 ---INSTRUCTIONS FOR COMPILING IAND---
-1) Set directory to the folder containing all of the scripts and source data.  
-2) In a command prompt, open python and import IAND_compile.py. This script builds IAND using the source data files and several other scripts. Each of called script recodes and transforms one of the source datasets. The output is built as a .txt file. Convert the .txt file to a .csv file.  Please note that adding the bilateral trade data takes significantly more time than adding the other variables.  If you do not need trade data, you can comment out the append_trade function in the IAND_compile.py main function; this will skip the trade data when IAND_compile is run.
-3) In Stata, run IAND_v1_cleaner.do.  This removes remaining errors in the data and prepares it for analysis as a .dta or .csv.
+1 Extract all files in the zipped folder to the folder where you want to store all the data and set as the directory for the analysis, in step 2.
+2) Modify the scripts to set directory to the folder containing all of the scripts and source data.  
+3) In a command prompt, open python and import IAND_compile.py. This script builds IAND using the source data files and several other scripts. Each of called script recodes and transforms one of the source datasets. The output is built as a .txt file. Convert the .txt file to a .csv file.  Please note that adding the bilateral trade data takes significantly more time than adding the other variables.  If you do not need trade data, you can comment out the append_trade function in the IAND_compile.py main function; this will skip the trade data when IAND_compile is run.
+4) In Stata, run IAND_v1_cleaner.do.  This removes remaining errors in the data and prepares it for analysis as a .dta or .csv.
 
 ---SOURCE DATA---
 Data for Jaccard Index and Hamming Distance between Diplomatic Networks:  Intergovernmental Organization Dataset for Dyad Units v2.3 (Pevehouse and Nordstrom 2005)
